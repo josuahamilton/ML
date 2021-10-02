@@ -25,3 +25,9 @@ if status == True:
             solver = st.selectbox('Solver',['lbfgs','newton-cg','liblinear','sag','saga'])
             multi_class = st.selectbox('Multi class',['auto','ovr','multinomial'])
             warm_start = st.radio('Warm start',[False,True]) 
+         with col2_2:
+            dual = st.radio('Dual or primal formulation',[False,True])
+            C = st.number_input('Inverse regularization strength',0.0,99.0,1.0,0.1)
+            intercept_scaling = st.number_input('Intercept scaling',0.0,99.0,1.0,0.1)
+            random_state = st.radio('Random state',[None,'Custom'])
+            if random_state == 'Custom':
