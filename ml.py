@@ -21,4 +21,7 @@ if status == True:
             penalty = st.selectbox('Penalty',['l2','l1','elasticnet','none'])
             tol = st.number_input('Tolerance (1e-4)',value=1)/10000
             fit_intercept = st.radio('Intercept',[True,False])
-           
+            class_weight = st.radio('Class weight',[None,'balanced'])
+            solver = st.selectbox('Solver',['lbfgs','newton-cg','liblinear','sag','saga'])
+            multi_class = st.selectbox('Multi class',['auto','ovr','multinomial'])
+            warm_start = st.radio('Warm start',[False,True]) 
