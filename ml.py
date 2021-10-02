@@ -31,3 +31,9 @@ if status == True:
             intercept_scaling = st.number_input('Intercept scaling',0.0,99.0,1.0,0.1)
             random_state = st.radio('Random state',[None,'Custom'])
             if random_state == 'Custom':
+random_state = st.number_input('Custom random state',0,99,1,1)
+            max_iter = st.number_input('Maximum iterations',0,100,100,1)
+            verbose = st.number_input('Verbose',0,99,0,1)
+            l1_ratio = st.radio('L1 ratio',[None,'Custom'])
+            if l1_ratio == 'Custom':
+                l1_ratio = st.number_input('Custom l1 ratio',0.0,1.0,1.0,0.01)
