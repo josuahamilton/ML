@@ -15,4 +15,10 @@ if status == True:
     with col3:
         test_size = st.number_input('Please enter test size',0.01,0.99,0.25,0.05)
 
-  
+    with st.expander('Advanced Parameters'):
+        col2_1, col2_2 = st.columns(2)
+        with col2_1:
+            penalty = st.selectbox('Penalty',['l2','l1','elasticnet','none'])
+            tol = st.number_input('Tolerance (1e-4)',value=1)/10000
+            fit_intercept = st.radio('Intercept',[True,False])
+           
