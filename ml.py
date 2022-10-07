@@ -30,6 +30,3 @@ if status == True:
             C = st.number_input('Inverse regularization strength',0.0,99.0,1.0,0.1)
             intercept_scaling = st.number_input('Intercept scaling',0.0,99.0,1.0,0.1)
             random_state = st.radio('Random state',[None,'Custom'])
-            if random_state == 'Custom':
-random_state = st.number_input('Custom random state',0,99,1,1)
-            
